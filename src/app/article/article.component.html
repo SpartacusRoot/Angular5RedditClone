@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <mat-card class="article-container" fxLayout="column">
+    <div fxLayout="row">
+    <div class="count-container">{{article.votes}}</div>
+    <div class="votes-container" fxLayout="column">
+    <mat-card-title>{{article.title}}</mat-card-title>
+    <mat-card-subtitle><a href="{{article.link}}">{{article.domain()}}</a></mat-card-subtitle>
+    </div>
+    </div>
+    <mat-card-actions class="article-actions">
+        <button mat-raised-button color="primary" (click)="voteUp()">UPVOTE</button>
+        <button mat-raised-button color="warn" (click)="voteDown()">DOWNVOTE</button>
+      </mat-card-actions>
+    </mat-card>
+    </div>
+
